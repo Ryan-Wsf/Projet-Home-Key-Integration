@@ -74,6 +74,7 @@ nav ul{
     list-style: none;
     display: flex;
     gap: 50px;
+    padding: 0px;
 }
 
 nav li{
@@ -100,7 +101,7 @@ nav ul li a:hover{
 #formSection1 button{
     background-color: var(--red);
     color: var(--white);
-    padding: 4px;
+    padding: 7px;
     border: none;
     border-radius: 0px 5px 5px 0px;
     cursor: pointer;
@@ -108,14 +109,14 @@ nav ul li a:hover{
 
 #formSection1 i{
     background-color: var(--red);
-    padding: 4.5px;
+    padding: 8px;
     border-radius: 5px 0px 0px 5px;
     z-index: -1;
 }
 
 #formSection1 input{
     margin: -4.5px;
-    padding: 3px 0px;
+    padding: 6px;
     border-radius: 1px;
     border: 1px solid var(--grey);
     outline: none;
@@ -153,6 +154,11 @@ nav ul li a:hover{
     padding-right: 5px;
 }
 
+#pSection1{
+    margin-bottom: 40px;
+
+}
+
 .iconeFilter{
     margin-right: 20px;
     border: var(--red) 1px solid;
@@ -178,6 +184,7 @@ nav ul li a:hover{
 
 .fa-circle-info{
     color: var(--red);
+    padding-right: 5px;
 
 }
 
@@ -257,10 +264,9 @@ nav ul li a:hover{
 #div1section2{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     flex: 1 0 30%;
     gap:40px;
-    padding:15px;
+    padding:40px;
     background-color: var(--lightgrey);
     border-radius: 12px;
 }
@@ -268,7 +274,6 @@ nav ul li a:hover{
 #div1section2 h2{
     padding: 15px;
     display: flex;
-    flex-basis: 100%;
 }
 
 #leadMore{
@@ -276,20 +281,18 @@ nav ul li a:hover{
     font-weight: 700;
     padding: 15px;
     display: flex;
-    flex-basis: 100%;
 }
 
 #div2section2 article{
     gap: 30px;
     display: flex;
-    align-items: center;
 }
 
 #div2section2 a article.popular::after{
     content: 'Popular';
     position: absolute;
     top: 10px;
-    right: 12px;
+    left: 12px;
     background: var(--red);
     color: var(--white);
     padding: 5px;
@@ -298,7 +301,6 @@ nav ul li a:hover{
 }
 
 .divMostPopularAccommodations{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -308,7 +310,6 @@ nav ul li a:hover{
     height: 160px;
     width: 95px;
     border-radius: 12px 0px 0px 12px;
-    display: flex;
 }
 
 #div2section2 a:hover img{
@@ -323,7 +324,7 @@ nav ul li a:hover{
     background-color: var(--lightgrey);
     border-radius: 12px;
     gap: 40px;
-    padding: 15px;
+    padding: 0px 40px 40px 40px;
 }
 
 #div2section2 h2{
@@ -349,7 +350,7 @@ nav ul li a:hover{
 
 #divSection3{
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 #divSection3 a{
@@ -424,5 +425,101 @@ footer a:hover{
 /* Responsive tablette */
 
 @media (max-width: 1024px) { 
+
+#section2{
+    flex-direction: column;
+}
+
+#divSection3{
+    flex-wrap: wrap;
+}
+
+#divSection3 a {
+    flex: 1 0 40%;
+}
+
+footer {
+    padding: 0px;
+}
+}
+
+/* Responsive mobile */
+
+@media (max-width: 767px) {
+
+header{
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    text-align: center;
+}
+
+nav ul{
+    gap:0px;
+}
+
+nav li{
+    flex: 1;
+    border-bottom: 1px solid var(--lightgrey);
+    padding-bottom: 20px;
+    transition: all 0.3s;
+}
+
+nav li:hover{
+    border-bottom: var(--red) 1px solid;
+    padding-bottom: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+nav li:hover a{
+    color: var(--red);
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    border-top: none;
+}
+
+#section1 div {
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+#section2 {
+    flex-direction: column-reverse;
+}
+
+#div2section2 article {
+    gap: 5px;
+}
+
+#section2 i{
+    margin: 0px;
+}
+
+#section2 p {
+    margin: 10px 0px 10px 5px;
+}
+
+#divArticleSection2 a {
+    flex: 1 0 100%;
+}
+
+#div2section2 img {
+    width: 75px;
+}
+
+#divSection3 a {
+    flex: 1 0 100%;
+}
+
+footer div{
+    flex-direction: column;
+    gap: 40px;
+}
 
 }
